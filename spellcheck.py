@@ -24,11 +24,11 @@ def main():
         choice = input("Enter menu selection (1-5): ")
         # Choice 1
         if choice == "1":
-            timeStart = time.time()
             word = input("Please enter a word: ").lower()
             print("Linear Search starting...")
-            endtimer = time.time()
+            timeStart = time.time()
             found = (linearSearch(dictionary, word))
+            endtimer = time.time()
             if found != -1:
                 print(f"{word} is IN the dictionary at position {found}")
             elif found == -1:
@@ -53,9 +53,9 @@ def main():
             timeStart = time.time()
             for i in range(len(aliceWords)):
                 found = linearSearch(dictionary, aliceWords[i])
+                endtimer = time.time()
                 if found == -1:
                     count += 1
-            endtimer = time.time()
             print(f"Total words not found: {(count)}")
             print(f"Time Elapsed {(endtimer - timeStart)} seconds")
         # Choice 4
@@ -64,9 +64,9 @@ def main():
             timeStart = time.time()
             for i in range(len(aliceWords)):
                 found = binarySearch(dictionary, aliceWords[i])
+                endtimer = time.time()
                 if found == -1:
                     count += 1
-            endtimer = time.time()
             print(f"Total words not found: {(count)}")
             print(f"Time Elapsed {(endtimer - timeStart)} seconds")
         elif choice == "5":
