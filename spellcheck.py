@@ -46,6 +46,7 @@ def main():
                 print(f"{word} is IN the dictionary at position {found}")
             elif found == -1:
                 print(f"{word} is NOT in the dictionary")
+            print(f"Time Elapsed {(endtimer - timeStart)} seconds")
         # Choice 3
         elif choice == "3":
             count = 0
