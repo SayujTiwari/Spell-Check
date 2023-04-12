@@ -29,7 +29,9 @@ def main():
             print("Linear Search starting...")
             endtimer = time.time()
             found = (linearSearch(dictionary, word))
-            if found == -1:
+            if found != -1:
+                print(f"{word} is IN the dictionary at position {found}")
+            elif found == -1:
                 print(f"{word} is NOT in the dictionary")
 
             print(f"Time Elapsed {(endtimer - timeStart)} seconds")
@@ -38,11 +40,12 @@ def main():
             word = input("Please enter a word: ").lower()
             print("Binary Search starting...")
             timeStart = time.time()
-            found = print(binarySearch(dictionary, word))
+            found = (binarySearch(dictionary, word))
             endtimer = time.time()
-            if found == -1:
-                print(f"{word} is not in the dictionary")
-            print(f"Time Elapsed {(endtimer - timeStart)} seconds")
+            if found != -1:
+                print(f"{word} is IN the dictionary at position {found}")
+            elif found == -1:
+                print(f"{word} is NOT in the dictionary")
         # Choice 3
         elif choice == "3":
             count = 0
